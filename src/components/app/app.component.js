@@ -11,6 +11,7 @@ import {
   ViewBookScreen,
   EditUserScreen,
   EditBookScreen,
+  EditTaskScreen,
   CreateTaskScreen
 } from '../../screens';
 
@@ -26,6 +27,7 @@ export default class App extends Component {
         <Scene key="CreateBook" component={CreateBookScreen} />
         <Scene key="ViewBook" component={ViewBookScreen} />
         <Scene key="EditBook" component={EditBookScreen} />
+        <Scene key="EditTask" component={EditTaskScreen} />
         <Scene key="CreateTask" component={CreateTaskScreen} />
       </Router>
     );

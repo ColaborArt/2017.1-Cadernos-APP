@@ -32,6 +32,10 @@ export default class ViewBook extends React.Component {
           <Text>Adicionar Atividade</Text>
         </Button>
 
+        <Button style={styles.btn} block bordered warning onPress={() => Actions.EditTask()}>
+          <Text>Editar Atividade</Text>
+        </Button>
+
         <Button block bordered warning onPress={() => Actions.EditBook()}>
           <Text>Editar caderno</Text>
         </Button>
