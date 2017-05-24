@@ -5,6 +5,7 @@ import initialState from './initial-state';
 
 import {
   bookListReducer,
+  taskListReducer,
   bookReducer,
   userReducer,
   taskReducer,
@@ -14,6 +15,7 @@ const reducers = combineReducers({
   user: userReducer,
   book: bookReducer,
   bookList: bookListReducer,
+  taskList: taskListReducer,
   task: taskReducer,
 });
 

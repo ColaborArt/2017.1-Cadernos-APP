@@ -39,6 +39,12 @@ const initialState = {
     created: false
   },
 
+  // Task list from screen after selecting Book
+  taskList: {
+    sendingData: false,
+    tasks: []
+  },
+
 };
 
 export default initialState;
