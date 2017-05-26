@@ -11,6 +11,7 @@ import {
   EditUserScreen,
   EditBookScreen,
   HomeScreen,
+  ListTaskScreen,
   ProfileScreen
 } from '../../screens';
 
@@ -18,7 +19,8 @@ export default class App extends Component {
   render() {
     return (
       <Router hideNavBar={true}>
-        <Scene key="Main" component={MainScreen} initial />
+        <Scene key="ListTask" component={ListTaskScreen} initial/>
+        <Scene key="Main" component={MainScreen} />
         <Scene key="CreateUser" component={CreateUserScreen} />
         <Scene key="UserLogin" component={UserLoginScreen} />
         <Scene key="Home" component={HomeScreen} />
