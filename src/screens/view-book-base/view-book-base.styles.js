@@ -6,14 +6,9 @@ const styles = {
   },
   myButton: {
 	backgroundColor:'#f24537',
-	color:'#ffffff',
-	fontSize:'17px',
 
 },
-myButton: active {
-	position:'absolute',
-	top:'1px',
-}
+
   title:{
     fontSize: 30,
     fontWeight: 'bold'

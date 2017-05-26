@@ -46,16 +46,7 @@ export default class ViewBookBase extends React.Component {
             style={styles.image}
             source={{ uri: 'https://cadernos-api.herokuapp.com/images/original/missing.jpg' }}
           />
-          <Button style={
-            {
-              styles.myButton},
-              position:'relative',
-              top: '191px',
-              left: '420px',
-              right: '-420px',
-              bottom: '-191px'
-
-        }>
+          <Button style={styles.myButton}>
             <Text>Sair</Text>
           </Button>
         </Content>
