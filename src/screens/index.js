@@ -7,6 +7,7 @@ import ViewBookScreen from './view-book/view-book.container';
 import EditBookScreen from './edit-book/edit-book.container';
 import HomeScreen  from './home/home.container';
 import ProfileScreen from './profile/profile.container';
+import MyTaskScreen from './my-tasks/my-tasks.component';
 
 export {
   CreateUserScreen,
@@ -17,5 +18,6 @@ export {
   ViewBookScreen,
   EditBookScreen,
   HomeScreen,
-  ProfileScreen
+  ProfileScreen,
+  MyTaskScreen
 }
