@@ -16,9 +16,11 @@ const mapDispatchToProps = (dispatch) => {
   return {
     createCategory(categoryData) {
       const callback = (category) => {
-
-        Actions.Main();
+        console.log("aehoooooooooooooooooooo");
+        console.log(category.sendingData);
+        Actions.Home();
       }
+
       dispatch(asyncCategorySet(categoryData, callback));
     },
     clearSelectedBook() {

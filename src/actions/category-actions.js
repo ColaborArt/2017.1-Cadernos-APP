@@ -10,6 +10,7 @@ import initialState from '../config/initial-state';
 
 export const categorySet = ({
   id, name,
+  description = initialState.category.description,
   sendingData = initialState.category.sendingData,
 }) => {
   return {

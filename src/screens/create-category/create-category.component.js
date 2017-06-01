@@ -74,11 +74,8 @@ export default class CreateCategoryComponent extends Component {
                 </Button>
             }
 
-        </View>
-
-
-
-      </Container>
+          </View>
+        </Container>
     );
 
   }

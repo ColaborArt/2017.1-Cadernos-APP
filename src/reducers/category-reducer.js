@@ -5,7 +5,7 @@ import {
   CATEGORY_SET_SENDING_DATA,
  } from '../config/actions-types';
 
- const categoryReducer = (state=initialState.category, action) => {
+ const categoryReducer = (state = initialState.category, action) => {
   switch (action.type) {
     case CATEGORY_SET:
     return {
