@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { Actions } from 'react-native-router-flux';
 
-import { Modal, TouchableHighlight, TouchableOpacity } from 'react-native'
+import { Modal, TouchableOpacity } from 'react-native'
 
 import {
   Text,

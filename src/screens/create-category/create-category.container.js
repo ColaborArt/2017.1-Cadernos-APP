@@ -1,17 +1,37 @@
 import { connect } from 'react-redux';
-
 import CreateCategoryComponent from './create-category.component'
 
-import initialState from '../../config/initial-state';
+import { asyncCategorySet, categorySet, categorySetSendingData } from '../../actions/category-actions';
 
-const mapStateToProps = () => {
+import initialState from '../../config/initial-state';
+import { Actions } from 'react-native-router-flux';
+
+const mapStateToProps = (state) => {
   return {
-    name: 'abc',
+    id: state.id,
+    name: state.category,
+    description: state.description,
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    createCategory(categoryData) {
+      const callback = (category) => {
+
+        Actions.ViewCattegory();
+      }
+      dispatch(asyncCategorySet(categoryData, callback));
+    },
+    clearSelectedBook() {
+      disptach(categorySet(initialState.category));
+    }
   }
 }
 
 const CreateCategoryContainer = connect(
   mapStateToProps,
+  mapDispatchToProps
 )(CreateCategoryComponent);
 
 export default (CreateCategoryContainer);

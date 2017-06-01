@@ -28,7 +28,7 @@ export default class AppRouter extends Component {
     return (
       <Router hideNavBar={true}>
 
-        <Scene key="Main" component={MainScreen} />
+        <Scene key="Main" component={MainScreen} initial/>
         <Scene key="MyTasks" component={MyTasks} />
         <Scene key="ViewBookBaseCategories" component={ViewBookBaseCategories} />
         <Scene key="ViewBookBaseColaborators" component={ViewBookBaseColaborators} />
@@ -43,7 +43,7 @@ export default class AppRouter extends Component {
         <Scene key="EditBook" component={EditBookScreen} />
         <Scene key="ViewTask" component={ViewTask} />
         <Scene key="EditTask" component={EditTask} />
-        <Scene key="CreateCategory" component={CreateCategoryScreen} initial/>
+        <Scene key="CreateCategory" component={CreateCategoryScreen}/>
       </Router>
     );
   }

@@ -62,7 +62,14 @@ export default class HomeScreen extends Component {
             >
               <Text>Criar caderno</Text>
             </Button>
+            <Button block warning bordered rounded small
+              key="createCategoryActionButton"
+              onPress={() => Actions.CreateCategory()}
+            >
+              <Text>Criar Categoria</Text>
+            </Button>
           </View>
+
         }
 
         <View style={{ flex: 1 }}>
