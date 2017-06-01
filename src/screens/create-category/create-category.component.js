@@ -58,7 +58,7 @@ export default class CreateCategoryComponent extends Component {
           <Input
             placeholder='Descrição'
             returnKeyType='next'
-            onChangeText={(text) => this.handleFieldOnChange('name', text)}
+            onChangeText={(text) => this.handleFieldOnChange('description', text)}
             value={this.state.description}
 
           />

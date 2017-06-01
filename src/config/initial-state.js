@@ -35,7 +35,16 @@ const initialState = {
   bookList: {
     sendingData: false,
     books: []
+  },
+
+  //create category
+  category: {
+    id: 0,
+    name: "",
+    description: ""
   }
 };
+
+
 
 export default initialState;

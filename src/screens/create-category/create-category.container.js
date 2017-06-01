@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
+
 import CreateCategoryComponent from './create-category.component'
 
+import initialState from '../../config/initial-state';
 
 const mapStateToProps = () => {
   return {

@@ -7,14 +7,16 @@ import {
   bookListReducer,
   bookReducer,
   userReducer,
-  loginReducer
+  loginReducer,
+  categoryReducer
 } from '../reducers';
 
 const reducers = combineReducers({
   user: userReducer,
   book: bookReducer,
   bookList: bookListReducer,
-  login: loginReducer
+  login: loginReducer,
+  category: categoryReducer,
 });
 
 const store = createStore(reducers, initialState, applyMiddleware(thunk));
