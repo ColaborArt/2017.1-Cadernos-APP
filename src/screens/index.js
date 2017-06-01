@@ -12,6 +12,8 @@ import ViewBookBaseCategories from './view-book-base/view-book-base-categories.c
 import ViewBookBaseColaborators from './view-book-base/view-book-base-colaborators.component';
 import MyTasks from './my-tasks/my-tasks.component';
 
+import CreateCategoryScreen from './create-category/create-category.container'
+
 export {
   CreateUserScreen,
   MainScreen,
@@ -25,5 +27,7 @@ export {
   ViewBookBaseTasks,
   ViewBookBaseCategories,
   ViewBookBaseColaborators,
-  MyTasks
+  MyTasks,
+  CreateCategoryScreen,
+
 }

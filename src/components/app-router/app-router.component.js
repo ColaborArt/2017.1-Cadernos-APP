@@ -14,7 +14,9 @@ import {
   ProfileScreen,
   ViewBookBaseTasks,
   ViewBookBaseCategories,
-  ViewBookBaseColaborators
+  ViewBookBaseColaborators,
+  CreateCategoryScreen,
+
 } from '../../screens';
 
 import ViewTask from '../../screens/view-task/view-task.component';
@@ -25,7 +27,8 @@ export default class AppRouter extends Component {
   render() {
     return (
       <Router hideNavBar={true}>
-        <Scene key="Main" component={MainScreen} initial />
+
+        <Scene key="Main" component={MainScreen} />
         <Scene key="MyTasks" component={MyTasks} />
         <Scene key="ViewBookBaseCategories" component={ViewBookBaseCategories} />
         <Scene key="ViewBookBaseColaborators" component={ViewBookBaseColaborators} />
@@ -40,6 +43,7 @@ export default class AppRouter extends Component {
         <Scene key="EditBook" component={EditBookScreen} />
         <Scene key="ViewTask" component={ViewTask} />
         <Scene key="EditTask" component={EditTask} />
+        <Scene key="CreateCategory" component={CreateCategoryScreen} initial/>
       </Router>
     );
   }

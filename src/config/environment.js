@@ -1,6 +1,6 @@
 const DEVELOPMENT = {
   //change on codenvy
-  baseURL: 'http://127.0.0.1:3000',
+  baseURL: 'https://cadernoapi-waysman.c9users.io/',
   timeout: 5000 // 5s
 }
 
