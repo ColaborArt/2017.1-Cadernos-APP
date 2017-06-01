@@ -8,9 +8,7 @@ import { Actions } from 'react-native-router-flux';
 
 const mapStateToProps = (state) => {
   return {
-    id: state.id,
-    name: state.category,
-    description: state.description,
+    category: state.category,
   }
 }
 
@@ -19,12 +17,12 @@ const mapDispatchToProps = (dispatch) => {
     createCategory(categoryData) {
       const callback = (category) => {
 
-        Actions.ViewCattegory();
+        Actions.Main();
       }
       dispatch(asyncCategorySet(categoryData, callback));
     },
     clearSelectedBook() {
-      disptach(categorySet(initialState.category));
+      dispatch(categorySet(initialState.category));
     }
   }
 }
@@ -32,6 +30,6 @@ const mapDispatchToProps = (dispatch) => {
 const CreateCategoryContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(CreateCategoryComponent);
+) (CreateCategoryComponent);
 
-export default (CreateCategoryContainer);
+export default CreateCategoryContainer;

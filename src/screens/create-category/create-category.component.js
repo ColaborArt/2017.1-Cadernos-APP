@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Actions } from 'react-native-router-flux';
 
-import { Modal, TouchableOpacity } from 'react-native'
-
 import {
   Text,
   View,
@@ -34,7 +32,7 @@ export default class CreateCategoryComponent extends Component {
     });
   }
 
-  getCategorydata() {
+  getCategoryData() {
     return {
       name: this.state.name,
       description: this.state.description,
@@ -65,14 +63,17 @@ export default class CreateCategoryComponent extends Component {
           />
         </Item>
 
-
           <View style={{ flex: 1 }}>
+            {this.props.category.sendingData ?
+              <Spinner />
+              :
+                <Button warning block style={{ borderRadius: 30}}
+                  onPress={() => this.props.createCategory(this.getCategoryData())}
+                >
+                  <Text>Criar Categoria</Text>
+                </Button>
+            }
 
-          <Button warning block style={{ borderRadius: 30}}
-            onPress={() => this.props.createCategory(this.getCategorydata())}
-          >
-            <Text>Criar Categoria</Text>
-          </Button>
         </View>
 
 

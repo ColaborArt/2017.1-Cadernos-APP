@@ -40,9 +40,11 @@ const initialState = {
   //create category
   category: {
     id: 0,
-    name: "",
-    description: ""
-  }
+    name: '',
+    description: '',
+    sendingData: false
+  },
+
 };
 
 

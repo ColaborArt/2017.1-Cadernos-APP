@@ -13,8 +13,9 @@ import {
     };
     case CATEGORY_SET_SENDING_DATA:
     return {
-      ...state
-    }
+      ...state,
+      sendingData: action.sendingData
+    };
     default:
       return state;
   }

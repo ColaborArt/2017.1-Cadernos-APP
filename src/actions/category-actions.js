@@ -10,13 +10,15 @@ import initialState from '../config/initial-state';
 
 export const categorySet = ({
   id, name,
+  sendingData = initialState.category.sendingData,
 }) => {
   return {
     type: CATEGORY_SET,
     category: {
       id,
       name,
-      description
+      description,
+      sendingData,
     }
   }
 }
@@ -52,7 +54,7 @@ export const asyncCategorySet = (categoryData, callback) => {
     .catch(err => {
       console.log('ERROR while creating category');
       console.log(err);
-    })
+    });
     dispatch(categorySetSendingData(false));
   }
 }
