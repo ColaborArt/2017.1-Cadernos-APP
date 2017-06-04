@@ -14,7 +14,10 @@ import {
 
 } from 'native-base';
 
+import { Alert } from 'react-native';
+
 import styles from './create-category.styles';
+import ListErrors from '../../components/list-errors/list-errors.component';
 
 export default class CreateCategoryComponent extends Component {
   constructor(props) {
@@ -24,6 +27,11 @@ export default class CreateCategoryComponent extends Component {
       name: '',
       description: '',
     }
+  }
+
+
+  componentWillUnmount() {
+    this.props.clearErrors();
   }
 
   handleFieldOnChange(field, value){
@@ -62,6 +70,10 @@ export default class CreateCategoryComponent extends Component {
 
           />
         </Item>
+        <Item>
+          <ListErrors errors = {this.props.category.errors.name} />
+        </Item>
+
 
           <View style={{ flex: 1 }}>
             {this.props.category.sendingData ?
@@ -73,10 +85,8 @@ export default class CreateCategoryComponent extends Component {
                   <Text>Criar Categoria</Text>
                 </Button>
             }
-
           </View>
         </Container>
     );
-
   }
 }

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import CreateCategoryComponent from './create-category.component'
 
-import { asyncCategorySet, categorySet, categorySetSendingData } from '../../actions/category-actions';
+import { asyncCategorySet, categorySet, categorySetSendingData,categorySetErrors } from '../../actions/category-actions';
 
 import initialState from '../../config/initial-state';
 import { Actions } from 'react-native-router-flux';
@@ -15,14 +15,19 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     createCategory(categoryData) {
+
+      dispatch(asyncCategorySet(categoryData, callback));
       const callback = (category) => {
-        console.log("aehoooooooooooooooooooo");
-        console.log(category.sendingData);
         Actions.Home();
       }
 
-      dispatch(asyncCategorySet(categoryData, callback));
+
     },
+
+    clearErrors() {
+      dispatch(categorySetErrors({}));
+    },
+
     clearSelectedBook() {
       dispatch(categorySet(initialState.category));
     }
