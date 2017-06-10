@@ -48,7 +48,8 @@ export default class TaskList extends Component {
       <Container>
         <View style={{ flex: 1 }}>
           <Picker mode="dropdown">
-            {this.props.categories.map(category => {
+            {this.props.categories ?
+              this.props.categories.map(category => {
               return (
                 <Picker.Item
                   label={category.name}
@@ -56,7 +57,10 @@ export default class TaskList extends Component {
                   key={category.name}
                 />
               );
-            })}
+            })
+            :
+            null
+            }
           </Picker>
         </View>
 
